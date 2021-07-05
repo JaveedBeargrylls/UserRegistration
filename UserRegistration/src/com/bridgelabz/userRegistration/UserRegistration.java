@@ -1,4 +1,4 @@
-package com.bridgelabz.UserRegistration;
+package com.bridgelabz.userRegistration;
 
 public class UserRegistration {
 	public static void main(String[] args) {
