@@ -12,6 +12,9 @@ class  Verify
 	private String userNameRegex;
 	private String email;
 	private String emailRegex;
+	private String mobile;
+	private String mobileRegex;
+	
 	public void userName()
 	{
 		userNameRegex = "[A-Z][a-z]{2,}";
@@ -54,7 +57,6 @@ class  Verify
 		
 		//Email id
 		
-		
 		System.out.println("Enter the valid Email id : ");
 		email = sc.next();
 		
@@ -72,7 +74,27 @@ class  Verify
 			System.out.println("Email is Not Valid");
 		}
 	}
+	
+	public void mobileNumber()
+	{
+		
+		mobileRegex = "[\\+](0|1|91)?[6-9][0-9]{9}";
+		System.out.println("Enter the Valid Mobile Number with Country Code : ");
+		mobile = "+"+sc.next();
+		
+		if(mobile.matches(mobileRegex))
+		{
+			System.out.println("Mobile Number is Valid");
+			System.out.println("Mobile Number = "+mobile);
+		}
+		else
+		{
+			System.out.println("MobileNumber is Not Valid");
+		}
+		
+	}
 }
+
 
 public class UserRegistration {
 	public static void main(String[] args) {
@@ -82,6 +104,7 @@ public class UserRegistration {
 		
 		obj.userName();
 		obj.emailValidation();
+		obj.mobileNumber();
 		}
 
 }
