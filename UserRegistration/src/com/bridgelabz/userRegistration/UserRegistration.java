@@ -1,7 +1,7 @@
 package com.bridgelabz.userRegistration;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 class  Verify
 {
@@ -10,7 +10,8 @@ class  Verify
 	public String firstName;
 	public String lastName;
 	private String userNameRegex;
-	
+	private String email;
+	private String emailRegex;
 	public void userName()
 	{
 		userNameRegex = "[A-Z][a-z]{2,}";
@@ -45,7 +46,31 @@ class  Verify
 				System.out.println("You Entered the Invalid FirstName");
 			}
 		}
+	}
+	
+	public void emailValidation()
+	{
+		emailRegex = "^[a-zA-Z0-9-]+[\\.[a-zA-Z0-9]]*@[a-z]{1,7}[\\.[a-z]]*";
 		
+		//Email id
+		
+		
+		System.out.println("Enter the valid Email id : ");
+		email = sc.next();
+		
+		Pattern pt = Pattern.compile(emailRegex);
+		
+		// validation
+		
+		if(email.matches(emailRegex))
+		{
+			System.out.println("Email is Valid");
+			System.out.println("Email = "+email);
+		}
+		else
+		{
+			System.out.println("Email is Not Valid");
+		}
 	}
 }
 
@@ -56,6 +81,7 @@ public class UserRegistration {
 		Verify obj = new Verify();
 		
 		obj.userName();
-			}
+		obj.emailValidation();
+		}
 
 }
