@@ -14,3 +14,5 @@ Master Branch
     
   UC-4
     Validation of PhoneNumber.
+  UC-5
+    Validation of Password Condition - Minimum 8 Characters, to access valid password.
