@@ -14,7 +14,8 @@ class  Verify
 	private String emailRegex;
 	private String mobile;
 	private String mobileRegex;
-	
+	private String passwordRegex;
+	private String password;
 	public void userName()
 	{
 		userNameRegex = "[A-Z][a-z]{2,}";
@@ -93,8 +94,23 @@ class  Verify
 		}
 		
 	}
+	public void VerifyPassword() {
+			//  Minimum 8 Char
+		
+		passwordRegex = "[[A-Za-z0-9!@#$%^&*\\-]+]{8,}";
+		System.out.println("Enter the Valid password minimum 8 characters : ");
+		mobile = sc.next();
+		
+		if(password.matches(passwordRegex))
+		{
+			System.out.println("Password is Valid");
+		}
+		else
+		{
+			System.out.println("Password is Not Valid");
+		}
+	}
 }
-
 
 public class UserRegistration {
 	public static void main(String[] args) {
@@ -105,6 +121,7 @@ public class UserRegistration {
 		obj.userName();
 		obj.emailValidation();
 		obj.mobileNumber();
+		obj.VerifyPassword();
 		}
 
 }
