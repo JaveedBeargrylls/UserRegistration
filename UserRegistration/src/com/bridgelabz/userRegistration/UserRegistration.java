@@ -101,9 +101,12 @@ class  Verify
 		
 			// Contain Minimum 1 UpperCase. 
 		
-		passwordRegex = "[A-Z]{1}[[A-Za-z0-9!@#$%^&*\\-\\_]+]{2,8}";
+		// passwordRegex = "[A-Z]{1}[[A-Za-z0-9!@#$%^&*\\-\\_]+]{2,8}";
+		
+			// Contain atleast 1 Numeric 
+		passwordRegex = "^(?=.*[A-Z])(?=.*[\\d])[\\w@!&$%#-_*+]{8,}";
 		System.out.println("Enter the Valid password minimum 8 characters : ");
-		mobile = sc.next();
+		password = sc.next();
 		
 		if(password.matches(passwordRegex))
 		{
