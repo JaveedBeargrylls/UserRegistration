@@ -104,7 +104,7 @@ class  Verify
 		// passwordRegex = "[A-Z]{1}[[A-Za-z0-9!@#$%^&*\\-\\_]+]{2,8}";
 		
 			// Contain atleast 1 Numeric 
-		passwordRegex = "^(?=.*[A-Z])(?=.*[\\d])[\\w@!&$%#-_*+]{8,}";
+		passwordRegex = "^(?=.*[A-Z])(?=.*[\\d])(?=.*[a-z])(?=.*[@#$%\\-\\+\\_]).{8,}$";
 		System.out.println("Enter the Valid password minimum 8 characters : ");
 		password = sc.next();
 		
